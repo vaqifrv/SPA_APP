@@ -5,6 +5,8 @@ App.controller('HomeCtrl', homeCtrl);
 App.controller('TestCtrl', testCtrl);
 
 var configFunction = function ($locationProvider, $routeProvider) {
+    
+    $locationProvider.hashPrefix('');
 
     $routeProvider.
           when('/home', {
