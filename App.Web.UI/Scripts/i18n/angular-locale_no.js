@@ -17,8 +17,8 @@ $provide.value("$locale", {
       "l\u00f8rdag"
     ],
     "ERANAMES": [
-      "f\u00f8r Kristus",
-      "etter Kristus"
+      "f.Kr.",
+      "e.Kr."
     ],
     "ERAS": [
       "f.Kr.",
@@ -119,7 +119,6 @@ $provide.value("$locale", {
     ]
   },
   "id": "no",
-  "localeID": "no",
   "pluralCat": function(n, opt_precision) {  if (n == 1) {    return PLURAL_CATEGORY.ONE;  }  return PLURAL_CATEGORY.OTHER;}
 });
 }]);

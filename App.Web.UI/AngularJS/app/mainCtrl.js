@@ -1,5 +1,5 @@
-﻿var MainCtrl = function ($scope) {
+﻿var mainCtrl = function ($scope) {
     
 }
 
-MainCtrl.$inject = ['$scope'];
+mainCtrl.$inject = ['$scope'];

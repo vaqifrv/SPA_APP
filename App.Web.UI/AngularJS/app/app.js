@@ -1,23 +1,23 @@
-﻿var App = angular.module('App', ['ngRoute', 'ui.bootstrap', 'chart.js']);
+﻿var App = angular.module('App', ['ngRoute']);
 
-App.controller('MainController', MainController);
-App.controller('GridController', GridController);
-App.controller('ViewProductController', ViewProductController);
+App.controller('MainCtrl', mainCtrl);
+App.controller('HomeCtrl', homeCtrl);
+App.controller('TestCtrl', testCtrl);
 
 var configFunction = function ($locationProvider, $routeProvider) {
 
     $routeProvider.
-          when('/grid', {
-              templateUrl: '/SPA/Views/Grid.html',
-              controller: GridController
+          when('/home', {
+              templateUrl: '/AngularJS/app/home/views/home.html',
+              controller: homeCtrl
           }).
-          when('/huba/create', {
-              templateUrl: '/SPA/Views/Huba.html',
-              controller: HubaController
+          when('/test', {
+              templateUrl: '/AngularJS/app/test/views/test.html',
+              controller: testCtrl
           }).
           otherwise({
               redirectTo: function () {
-                  return '/grid';
+                  return '/home';
               }
           });
 }

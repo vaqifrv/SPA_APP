@@ -81,18 +81,18 @@ $provide.value("$locale", {
       "dec."
     ],
     "STANDALONEMONTH": [
-      "januari",
-      "februari",
-      "maart",
-      "april",
-      "mei",
-      "juni",
-      "juli",
-      "augustus",
-      "september",
-      "oktober",
-      "november",
-      "december"
+      "Januari",
+      "Februari",
+      "Maart",
+      "April",
+      "Mei",
+      "Juni",
+      "Juli",
+      "Augustus",
+      "September",
+      "Oktober",
+      "November",
+      "December"
     ],
     "WEEKENDRANGE": [
       5,
@@ -137,7 +137,6 @@ $provide.value("$locale", {
     ]
   },
   "id": "nl-sx",
-  "localeID": "nl_SX",
   "pluralCat": function(n, opt_precision) {  var i = n | 0;  var vf = getVF(n, opt_precision);  if (i == 1 && vf.v == 0) {    return PLURAL_CATEGORY.ONE;  }  return PLURAL_CATEGORY.OTHER;}
 });
 }]);

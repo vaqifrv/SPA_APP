@@ -1,5 +1,5 @@
-﻿var TestCtrl = function ($scope) {
-    $scope.test = "test";
+﻿var testCtrl = function ($scope) {
+    $scope.title = "Test Page";
 }
 
-TestCtrl.$inject = ['$scope', '$uibModal'];
+testCtrl.$inject = ['$scope'];

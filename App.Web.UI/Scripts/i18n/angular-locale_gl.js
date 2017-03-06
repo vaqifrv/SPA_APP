@@ -59,7 +59,7 @@ $provide.value("$locale", {
     ],
     "SHORTDAY": [
       "dom",
-      "luns",
+      "lun",
       "mar",
       "m\u00e9r",
       "xov",
@@ -129,15 +129,14 @@ $provide.value("$locale", {
         "maxFrac": 2,
         "minFrac": 2,
         "minInt": 1,
-        "negPre": "-",
-        "negSuf": "\u00a0\u00a4",
-        "posPre": "",
-        "posSuf": "\u00a0\u00a4"
+        "negPre": "-\u00a4",
+        "negSuf": "",
+        "posPre": "\u00a4",
+        "posSuf": ""
       }
     ]
   },
   "id": "gl",
-  "localeID": "gl",
   "pluralCat": function(n, opt_precision) {  var i = n | 0;  var vf = getVF(n, opt_precision);  if (i == 1 && vf.v == 0) {    return PLURAL_CATEGORY.ONE;  }  return PLURAL_CATEGORY.OTHER;}
 });
 }]);

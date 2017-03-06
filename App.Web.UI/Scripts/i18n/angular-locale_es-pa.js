@@ -4,8 +4,8 @@ var PLURAL_CATEGORY = {ZERO: "zero", ONE: "one", TWO: "two", FEW: "few", MANY: "
 $provide.value("$locale", {
   "DATETIME_FORMATS": {
     "AMPMS": [
-      "a.m.",
-      "p.m."
+      "a. m.",
+      "p. m."
     ],
     "DAY": [
       "domingo",
@@ -57,24 +57,24 @@ $provide.value("$locale", {
       "jun.",
       "jul.",
       "ago.",
-      "sep.",
+      "sept.",
       "oct.",
       "nov.",
       "dic."
     ],
     "STANDALONEMONTH": [
-      "enero",
-      "febrero",
-      "marzo",
-      "abril",
-      "mayo",
-      "junio",
-      "julio",
-      "agosto",
-      "septiembre",
-      "octubre",
-      "noviembre",
-      "diciembre"
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
     ],
     "WEEKENDRANGE": [
       5,
@@ -119,7 +119,6 @@ $provide.value("$locale", {
     ]
   },
   "id": "es-pa",
-  "localeID": "es_PA",
   "pluralCat": function(n, opt_precision) {  if (n == 1) {    return PLURAL_CATEGORY.ONE;  }  return PLURAL_CATEGORY.OTHER;}
 });
 }]);

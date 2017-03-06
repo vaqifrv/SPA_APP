@@ -57,24 +57,24 @@ $provide.value("$locale", {
       "jun.",
       "jul.",
       "ago.",
-      "sep.",
+      "sept.",
       "oct.",
       "nov.",
       "dic."
     ],
     "STANDALONEMONTH": [
-      "enero",
-      "febrero",
-      "marzo",
-      "abril",
-      "mayo",
-      "junio",
-      "julio",
-      "agosto",
-      "septiembre",
-      "octubre",
-      "noviembre",
-      "diciembre"
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
     ],
     "WEEKENDRANGE": [
       5,
@@ -119,7 +119,6 @@ $provide.value("$locale", {
     ]
   },
   "id": "es-us",
-  "localeID": "es_US",
   "pluralCat": function(n, opt_precision) {  if (n == 1) {    return PLURAL_CATEGORY.ONE;  }  return PLURAL_CATEGORY.OTHER;}
 });
 }]);
