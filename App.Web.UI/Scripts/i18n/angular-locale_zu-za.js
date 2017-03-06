@@ -4,17 +4,17 @@ var PLURAL_CATEGORY = {ZERO: "zero", ONE: "one", TWO: "two", FEW: "few", MANY: "
 $provide.value("$locale", {
   "DATETIME_FORMATS": {
     "AMPMS": [
-      "AM",
-      "PM"
+      "Ekuseni",
+      "Ntambama"
     ],
     "DAY": [
-      "ISonto",
-      "UMsombuluko",
-      "ULwesibili",
-      "ULwesithathu",
-      "ULwesine",
-      "ULwesihlanu",
-      "UMgqibelo"
+      "Sonto",
+      "Msombuluko",
+      "Lwesibili",
+      "Lwesithathu",
+      "Lwesine",
+      "Lwesihlanu",
+      "Mgqibelo"
     ],
     "ERANAMES": [
       "BC",
@@ -29,7 +29,7 @@ $provide.value("$locale", {
       "Januwari",
       "Februwari",
       "Mashi",
-      "Ephreli",
+      "Apreli",
       "Meyi",
       "Juni",
       "Julayi",
@@ -52,7 +52,7 @@ $provide.value("$locale", {
       "Jan",
       "Feb",
       "Mas",
-      "Eph",
+      "Apr",
       "Mey",
       "Jun",
       "Jul",
@@ -66,7 +66,7 @@ $provide.value("$locale", {
       "Januwari",
       "Februwari",
       "Mashi",
-      "Ephreli",
+      "Apreli",
       "Meyi",
       "Juni",
       "Julayi",
@@ -119,7 +119,6 @@ $provide.value("$locale", {
     ]
   },
   "id": "zu-za",
-  "localeID": "zu_ZA",
   "pluralCat": function(n, opt_precision) {  var i = n | 0;  if (i == 0 || n == 1) {    return PLURAL_CATEGORY.ONE;  }  return PLURAL_CATEGORY.OTHER;}
 });
 }]);

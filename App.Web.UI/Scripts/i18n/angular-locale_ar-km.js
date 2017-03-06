@@ -82,12 +82,12 @@ $provide.value("$locale", {
     ],
     "fullDate": "EEEE\u060c d MMMM\u060c y",
     "longDate": "d MMMM\u060c y",
-    "medium": "dd\u200f/MM\u200f/y HH:mm:ss",
+    "medium": "dd\u200f/MM\u200f/y h:mm:ss a",
     "mediumDate": "dd\u200f/MM\u200f/y",
-    "mediumTime": "HH:mm:ss",
-    "short": "d\u200f/M\u200f/y HH:mm",
+    "mediumTime": "h:mm:ss a",
+    "short": "d\u200f/M\u200f/y h:mm a",
     "shortDate": "d\u200f/M\u200f/y",
-    "shortTime": "HH:mm"
+    "shortTime": "h:mm a"
   },
   "NUMBER_FORMATS": {
     "CURRENCY_SYM": "CF",
@@ -119,7 +119,6 @@ $provide.value("$locale", {
     ]
   },
   "id": "ar-km",
-  "localeID": "ar_KM",
   "pluralCat": function(n, opt_precision) {  if (n == 0) {    return PLURAL_CATEGORY.ZERO;  }  if (n == 1) {    return PLURAL_CATEGORY.ONE;  }  if (n == 2) {    return PLURAL_CATEGORY.TWO;  }  if (n % 100 >= 3 && n % 100 <= 10) {    return PLURAL_CATEGORY.FEW;  }  if (n % 100 >= 11 && n % 100 <= 99) {    return PLURAL_CATEGORY.MANY;  }  return PLURAL_CATEGORY.OTHER;}
 });
 }]);
