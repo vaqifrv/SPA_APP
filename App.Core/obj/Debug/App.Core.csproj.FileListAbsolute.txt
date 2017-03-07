@@ -1,0 +1,15 @@
+F:\Mine\App\App.Core\bin\Debug\App.Core.dll
+F:\Mine\App\App.Core\bin\Debug\App.Core.pdb
+F:\Mine\App\App.Core\bin\Debug\Ninject.dll
+F:\Mine\App\App.Core\bin\Debug\NLog.dll
+F:\Mine\App\App.Core\bin\Debug\Newtonsoft.Json.dll
+F:\Mine\App\App.Core\bin\Debug\NHibernate.dll
+F:\Mine\App\App.Core\bin\Debug\Iesi.Collections.dll
+F:\Mine\App\App.Core\bin\Debug\Ninject.xml
+F:\Mine\App\App.Core\bin\Debug\NLog.xml
+F:\Mine\App\App.Core\bin\Debug\Newtonsoft.Json.xml
+F:\Mine\App\App.Core\bin\Debug\NHibernate.xml
+F:\Mine\App\App.Core\bin\Debug\Iesi.Collections.xml
+F:\Mine\App\App.Core\obj\Debug\App.Core.dll
+F:\Mine\App\App.Core\obj\Debug\App.Core.pdb
+F:\Mine\App\App.Core\bin\Debug\App.Core.dll.config
