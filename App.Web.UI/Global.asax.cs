@@ -1,4 +1,6 @@
-﻿using System;
+﻿using App.Core.Infrastructure;
+using App.Web.UI.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,9 +17,14 @@ namespace App.Web.UI
         {
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            //BundleConfig.RegisterBundles(BundleTable.Bundles);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+
+            IoC.Current = new IoC(new MvcInjectModule());
+            IoC.Current.ApplicationDirectory = Server.MapPath("~/");
+            ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
         }
     }
 }
