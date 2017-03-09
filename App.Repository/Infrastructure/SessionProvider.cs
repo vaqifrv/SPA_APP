@@ -34,7 +34,7 @@ namespace App.Repository.Infrastructure
                 //shcema update ucun
                 //.ExposeConfiguration(c => new SchemaUpdate(c).Execute(false, true)) 
                   //schema create ucun   
-                .ExposeConfiguration(c => new SchemaExport(c).Create(true, true)) 
+                //.ExposeConfiguration(c => new SchemaExport(c).Create(true, true)) 
                 .BuildConfiguration();
 
             //var cfg = Fluently.Configure()
