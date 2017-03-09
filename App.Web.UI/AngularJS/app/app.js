@@ -1,8 +1,13 @@
-﻿var App = angular.module('App', ['ngRoute']);
+﻿var app = angular.module('App', ['ngRoute']);
 
-App.controller('MainCtrl', mainCtrl);
-App.controller('HomeCtrl', homeCtrl);
-App.controller('TestCtrl', testCtrl);
+// Begin Services
+app.service('TestService', testService);
+// End Services
 
+// Begin Controllers
+app.controller('MainCtrl', mainCtrl);
+app.controller('HomeCtrl', homeCtrl);
+app.controller('TestCtrl', testCtrl);
+// End Controllers
 
-App.config(['$locationProvider', '$routeProvider', configFunction]);
+app.config(['$locationProvider', '$routeProvider', configFunction]);

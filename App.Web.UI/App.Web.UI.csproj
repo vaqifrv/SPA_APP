@@ -183,10 +183,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AngularJS\app\home\services\" />
-    <Folder Include="AngularJS\app\test\services\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -247,6 +245,7 @@
     <Content Include="AngularJS\app\mainCtrl.js" />
     <Content Include="AngularJS\app\home\controllers\homeCtrl.js" />
     <Content Include="AngularJS\app\test\controllers\testCtrl.js" />
+    <Content Include="AngularJS\app\test\services\testService.js" />
     <Content Include="AngularJS\app\test\views\test.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />

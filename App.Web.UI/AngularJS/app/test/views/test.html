@@ -1,1 +1,16 @@
-﻿<h2>{{title}}</h2>
+﻿<h2>{{data.title}}</h2> <hr/>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in data.testList">
+        <td>{{ item.Id }}</td>
+        <td>{{ item.Name }}</td>
+    </tr>
+    </tbody>
+</table>
