@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using App.Web.UI.Infrastructure;
 
 namespace App.Web.UI
 {
@@ -19,6 +20,17 @@ namespace App.Web.UI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+              name: "DefaultApi2",
+              routeTemplate: "api/{controller}/{action}/{itemId}",
+              defaults: new { itemId = RouteParameter.Optional }
+              );
+
+            config.Formatters.Clear();
+
+            config.Formatters.Insert(0, new JsonNetFormatter());
+            config.Formatters.Add(new PdfFormatter());
         }
     }
 }

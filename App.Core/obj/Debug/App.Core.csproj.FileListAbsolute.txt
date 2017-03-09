@@ -13,3 +13,4 @@ F:\Mine\App\App.Core\bin\Debug\Iesi.Collections.xml
 F:\Mine\App\App.Core\obj\Debug\App.Core.dll
 F:\Mine\App\App.Core\obj\Debug\App.Core.pdb
 F:\Mine\App\App.Core\bin\Debug\App.Core.dll.config
+F:\Mine\App\App.Core\obj\Debug\App.Core.csprojResolveAssemblyReference.cache
