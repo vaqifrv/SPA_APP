@@ -1,0 +1,61 @@
+﻿<div class="portlet light" style="min-height: 400px;" ng-form="roleCreateForm">
+    <div class="portlet-title">
+        <div class="caption">
+            Rol
+        </div>
+    </div>
+    <div class="portlet-body">
+        <div class="row">
+            <div ng-bind-html="data.notification"></div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" for="Name">Rol</label>
+                    <input type="text" ng-model="data.role.Name" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Açıqlama</label>
+                    <textarea rows="3" cols="40" ng-model="data.role.Description" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Səlahiyyətlər</label>
+                    <div class="input-group" style="margin-bottom: 15px;">
+                        <input type="text" id="search" class="searchIcon form-control" ng-model="searchText" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                    </div>
+                    <div class="panel-search">
+                        <table id="tableRights" class="table">
+                            <tbody>
+                                <tr ng-repeat="right in data.role.CheckedRights | filter: searchText">
+                                    <td>
+                                        <div class="md-checkbox" style="margin-left: 5px;">
+                                            <input type="checkbox" class="md-check" id="{{right.Item.Id}}" ng-model="data.role.CheckedRights[$index].Checked">
+                                            <label for="{{right.Item.Id}}">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span> {{right.Item.Name}}
+                                            </label>
+                                        </div>
+                                        <!--<input ng-model="data.role.CheckedRights[$index].Checked" ng-checked="data.role.CheckedRights[$index].Checked" type="checkbox" />
+                                        <span>{{right.Item.Name}}</span>-->
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" value="1" class="btn btn-success" ng-click="save()" ng-disabled="roleCreateForm.$invalid || data.showLoader">Yadda saxla</button>
+            <a href="/security/role/index" class="btn red">İmtina et</a>
+        </div>
+
+
+    </div>
+</div>

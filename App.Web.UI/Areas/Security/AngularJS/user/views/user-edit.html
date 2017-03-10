@@ -1,0 +1,100 @@
+﻿<!-- BEGIN EXAMPLE TABLE PORTLET-->
+<div class="portlet light bordered">
+    <div class="portlet-title">
+        <div class="caption font-dark">
+            <span class="caption-subject bold ">İstifadəçi</span>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <ul class="nav nav-tabs tabs-left">
+                    <li class="active">
+                        <a href="#tab_6_1" data-toggle="tab"> Ümumi məlumatlar </a>
+                    </li>
+                    <li>
+                        <a href="#tab_6_2" data-toggle="tab"> Şifrəni dəyiş </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9 col-sm-9 col-xs-9">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_6_1" ng-form="adminEditForm">
+                        <div ng-bind-html="data.notification"></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <table class="table">
+                                    <tr>
+                                        <td>İstifadəçi adı</td>
+                                        <td>
+                                            <input ng-model="data.adminEdit.User.Username" type="text" readonly="" class="form-control" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Aktiv
+                                        </td>
+                                        <td>
+                                            <div class="md-checkbox" style="margin-left: 5px;">
+                                                <input type="checkbox" class="md-check" id="isActive" ng-model="data.adminEdit.User.IsEnabled">
+                                                <label for="isActive">
+                                                    <span></span>
+                                                    <span class="check"></span>
+                                                    <span class="box"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    Rollar <br />
+                                    <div class="input-group">
+                                        <input type="text" id="search" class="form-control" ng-model="searchText"><span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </span>
+                                    </div>
+                                    <hr />
+                                    <div class="panel-search">
+                                        <table id="tableRoles">
+                                            <tbody>
+                                                <tr ng-repeat="role in data.adminEdit.CheckedRoles | filter: searchText">
+                                                    <td>
+                                                        <div class="md-checkbox" style="margin-left: 5px;">
+                                                            <input type="checkbox" class="md-check" id="{{role.Item.Id}}" ng-model="data.adminEdit.CheckedRoles[$index].Checked">
+                                                            <label for="{{role.Item.Id}}">
+                                                                <span></span>
+                                                                <span class="check"></span>
+                                                                <span class="box"></span> {{role.Item.Name}}
+                                                            </label>
+                                                        </div>
+
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" style="float: right;">
+                            <button type="submit" value="1" class="btn btn-success" ng-click="saveAdminEdit()" ng-disabled="adminEditForm.$invalid || data.showLoader">Yadda saxla</button>
+                            <a href="/security/user/index" class="btn red">İmtina et</a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab_6_2">
+                        <p>
+                            Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
+                            craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
+                            Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel.
+                            Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

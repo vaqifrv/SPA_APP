@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Agile.Solutions.Infrastructure.Membership"
+                   namespace="Agile.Solutions.Infrastructure.Membership.Domain.Entities">
+
+  <class name="Right" table="Rights">
+    <id name="Id" column="RightId" type="int">
+      <generator class ="native">
+      </generator>
+    </id>
+
+    <property name="Name" column="RightName" type="AnsiString" length="100" />
+    <property name="Description" column="RightDesc" type="string" length="200"/>
+    <property name="LogEnabled" column="LogEnabled" type="boolean" />
+
+    <bag name="Roles" table="RoleRights" inverse ="true">
+      <key>
+        <column name="RightId" />
+      </key>
+      <many-to-many class="Role" fetch="join" >
+        <column name="RoleId" />
+      </many-to-many>
+    </bag>
+  </class>
+
+</hibernate-mapping>

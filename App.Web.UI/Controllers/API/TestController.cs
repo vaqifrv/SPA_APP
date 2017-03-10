@@ -15,5 +15,11 @@ namespace App.Web.UI.Controllers.API
             var result = Service.List();
             return result.List;
         }
+
+        public string CreateUser()
+        {
+
+            return "gdgd";
+        }
     }
 }

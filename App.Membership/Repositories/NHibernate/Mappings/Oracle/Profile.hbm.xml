@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Agile.Solutions.Infrastructure.Membership"
+                   namespace="Agile.Solutions.Infrastructure.Membership.Domain.Entities">
+
+  <class name="Profile" table="PROFILE_DATA">
+    <composite-id>
+      <key-many-to-one name="User" class="User" column="USERNAME" ></key-many-to-one>
+      <key-many-to-one name="property" class="ProfileProperty" column="PROPERTY_NAME"></key-many-to-one>
+    </composite-id>
+    
+    <property name="propertyValue" column="PROPERTY_VALUE" />
+
+  </class>
+
+</hibernate-mapping>

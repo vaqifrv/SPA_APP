@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Agile.Solutions.Infrastructure.Membership"
+                   namespace="Agile.Solutions.Infrastructure.Membership.Domain.Entities">
+
+  <class name="Role" table="ROLES">
+    <id name="Id" column="ROLE_ID" type="int">
+      <generator class ="identity">
+        <param name="sequence">ROLES_SEQ</param>
+      </generator>
+    </id>
+    
+    <property name="Name" column="ROLE_NAME" type="AnsiString" length="50"/>
+    <property name="Description" column="ROLE_DESC"  type="string" length="200" />
+
+    <bag name="Rights" table="ROLE_RIGHTS">
+      <key>
+        <column name="ROLE_ID" />
+      </key>
+      <many-to-many class="Right" fetch="join" >
+        <column name="RIGHT_ID" />
+      </many-to-many>
+    </bag>
+
+    <bag name="Users" table="USER_ROLES" inverse ="true">
+      <key>
+        <column name="ROLE_ID" />
+      </key>
+      <many-to-many class="User" fetch="join" >
+        <column name="USERNAME" />
+      </many-to-many>
+    </bag>
+  </class>
+
+</hibernate-mapping>

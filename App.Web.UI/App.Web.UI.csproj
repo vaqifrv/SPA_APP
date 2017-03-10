@@ -184,6 +184,7 @@
   <ItemGroup>
     <Folder Include="AngularJS\app\home\services\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Security\AngularJS\login\controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -220,6 +221,20 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Areas\Security\Controllers\AgController.cs" />
+    <Compile Include="Areas\Security\Controllers\API\RightController.cs" />
+    <Compile Include="Areas\Security\Controllers\API\RoleController.cs" />
+    <Compile Include="Areas\Security\Controllers\API\UserController.cs" />
+    <Compile Include="Areas\Security\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Security\Models\AdminEditViewModel.cs" />
+    <Compile Include="Areas\Security\Models\CheckedItem.cs" />
+    <Compile Include="Areas\Security\Models\PagingInfo.cs" />
+    <Compile Include="Areas\Security\Models\ProfileViewModel.cs" />
+    <Compile Include="Areas\Security\Models\ReportLogListViewModel.cs" />
+    <Compile Include="Areas\Security\Models\ReportTopUsedRightsModel.cs" />
+    <Compile Include="Areas\Security\Models\RolesDictionaryEditViewModel.cs" />
+    <Compile Include="Areas\Security\Models\UserDetailsViewModel.cs" />
+    <Compile Include="Areas\Security\SecurityAreaRegistration.cs" />
     <Compile Include="Controllers\API\TestController.cs" />
     <Compile Include="Controllers\MVC\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -248,6 +263,33 @@
     <Content Include="AngularJS\app\test\services\testService.js" />
     <Content Include="AngularJS\app\test\views\test.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Areas\Security\AngularJS\login\views\login-view.html" />
+    <Content Include="Areas\Security\AngularJS\right\controllers\rightCreateCtrl.js" />
+    <Content Include="Areas\Security\AngularJS\right\controllers\rightListCtrl.js" />
+    <Content Include="Areas\Security\AngularJS\right\services\rightService.js" />
+    <Content Include="Areas\Security\AngularJS\right\views\right-create.html" />
+    <Content Include="Areas\Security\AngularJS\right\views\right-list.html" />
+    <Content Include="Areas\Security\AngularJS\role\controllers\roleCreateCtrl.js" />
+    <Content Include="Areas\Security\AngularJS\role\controllers\roleListCtrl.js" />
+    <Content Include="Areas\Security\AngularJS\role\services\roleService.js" />
+    <Content Include="Areas\Security\AngularJS\role\views\role-create.html" />
+    <Content Include="Areas\Security\AngularJS\role\views\role-list.html" />
+    <Content Include="Areas\Security\AngularJS\user\controllers\userCreateCtrl.js" />
+    <Content Include="Areas\Security\AngularJS\user\controllers\userDetailsCtrl.js" />
+    <Content Include="Areas\Security\AngularJS\user\controllers\userEditCtrl.js" />
+    <Content Include="Areas\Security\AngularJS\user\controllers\userListCtrl.js" />
+    <Content Include="Areas\Security\AngularJS\user\services\userService.js" />
+    <Content Include="Areas\Security\AngularJS\user\views\user-create.html" />
+    <Content Include="Areas\Security\AngularJS\user\views\user-details.html" />
+    <Content Include="Areas\Security\AngularJS\user\views\user-edit.html" />
+    <Content Include="Areas\Security\AngularJS\user\views\user-list.html" />
+    <Content Include="Areas\Security\Content\images\left.png" />
+    <Content Include="Areas\Security\Content\images\left2.png" />
+    <Content Include="Areas\Security\Content\images\magnifier.png" />
+    <Content Include="Areas\Security\Content\images\right.png" />
+    <Content Include="Areas\Security\Content\images\right2.png" />
+    <Content Include="Areas\Security\Content\images\user_aktiv.png" />
+    <Content Include="Areas\Security\Content\images\user_passiv.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -1065,6 +1107,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Areas\Security\Views\Shared\Login.cshtml" />
+    <Content Include="Areas\Security\Views\web.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-2.2.1.min.map" />
     <Content Include="Scripts\version.json" />
@@ -1086,6 +1130,10 @@
     <ProjectReference Include="..\App.Core\App.Core.csproj">
       <Project>{f09692e4-0538-4efd-836b-2c29ae1440f2}</Project>
       <Name>App.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Membership\App.Membership.csproj">
+      <Project>{9e79454a-fae3-4dc8-9e57-9163011b3164}</Project>
+      <Name>App.Membership</Name>
     </ProjectReference>
     <ProjectReference Include="..\App.Repository\App.Repository.csproj">
       <Project>{81393460-5674-4F21-820A-830668549967}</Project>
