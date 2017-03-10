@@ -1,0 +1,149 @@
+﻿  <!-- BEGIN PAGE BASE CONTENT -->
+<div class="profile">
+    <div class="tabbable-line tabbable-full-width">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab_1_1" data-toggle="tab"> Profil </a>
+            </li>
+            <li>
+                <a href="#tab_1_3" data-toggle="tab"> Hesabat </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab_1_1">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="list-unstyled profile-nav">
+                            <li>
+                                <img src="/Content/profile.jpg" class="img-responsive pic-bordered" alt="" />
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-12 profile-info">
+                                <h1 class="font-green sbold uppercase">{{data.userProfile.User.UserName}}</h1>
+
+                            </div>
+                            <!--end col-md-8-->
+
+                        </div>
+                        <!--end row-->
+                        <div class="tabbable-line tabbable-custom-profile">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#tab_1_11" data-toggle="tab"> Rollar </a>
+                                </li>
+                                <li>
+                                    <a href="#tab_1_22" data-toggle="tab"> Səlahiyyətlər </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab_1_11">
+                                    <div class="portlet-body">
+                                        <table class="table table-striped table-bordered table-advance table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <i class="fa fa-users"></i> Rol
+                                                    </th>
+                                                    <th class="hidden-xs">
+                                                        <i class="fa fa-question"></i> Açıqlama
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr ng-repeat="item in data.userProfile.Roles">
+                                                    <td>
+                                                        {{item.Name}}
+                                                    </td>
+                                                    <td> {{item.Description}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--tab-pane-->
+                                <div class="tab-pane" id="tab_1_22">
+                                    <div class="tab-pane active" id="tab_1_1_1">
+                                        <table class="table table-striped table-bordered table-advance table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <i class="fa fa-users"></i> Səlahiyyət
+                                                    </th>
+                                                    <th class="hidden-xs">
+                                                        <i class="fa fa-question"></i> Açıqlama
+                                                    </th>
+                                                    <th><i class="fa fa-user"></i> Log Enabled</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="item in data.userProfile.Rights">
+                                                    <td>{{item.Name}}</td>
+                                                    <td>{{item.Description}}</td>
+                                                    <td>{{item.LogEnabled}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--tab-pane-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--tab_1_2-->
+            <div class="tab-pane" id="tab_1_3">
+                <div class="row profile-account">
+
+                    <div class="col-md-12">
+                        <div class="tab-content">
+                            <div id="tab_1-1" class="tab-pane active">
+
+                                <table class="table table-striped table-bordered table-hover ag-table-case-list" id="sample_1">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Tarix
+                                            </th>
+                                            <th>
+                                                Əməliyyatın adı
+                                            </th>
+
+                                            <th>
+                                                Açıqlama
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="item in data.userProfile.Logs">
+                                            <td>
+                                                {{item.Date}}
+                                            </td>
+                                            <td>
+                                                {{item.Action.Name}}
+                                            </td>
+
+                                            <td>
+                                                {{item.Description}}
+                                            </td>
+                                        </tr>
+                                        
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end col-md-9-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END PAGE BASE CONTENT -->

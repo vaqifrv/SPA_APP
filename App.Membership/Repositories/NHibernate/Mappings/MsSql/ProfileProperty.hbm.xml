@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Agile.Solutions.Infrastructure.Membership"
+                   namespace="Agile.Solutions.Infrastructure.Membership.Domain.Entities">
+
+  <class name="ProfileProperty" table="ProfileProperties">
+    <id name="Name" column="Name" type="AnsiString" length="30"></id>
+    <property name="Label" column="Label" />
+    <property name="regExp" column="RegExp" />
+    <property name="controlType" column="ControlType" />
+    <property name="createdDate" column="CreatedDate" type="DateTime" update="false" insert="false" generated="insert"/>
+    <property name="orderId" column="OrderId" type="int" />    
+  </class>
+
+</hibernate-mapping>

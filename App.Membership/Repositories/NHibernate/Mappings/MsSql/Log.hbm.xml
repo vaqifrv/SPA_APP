@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Agile.Solutions.Infrastructure.Membership"
+                   namespace="Agile.Solutions.Infrastructure.Membership.Domain.Entities">
+
+  <class name="Log" table="Logs" >
+    <id name="Id" column="LogId" type="int">
+      <generator class="native"></generator>
+    </id>
+    
+    <!--<property name="ActionId" column="ACTION_ID" type="int" />-->
+
+    <!--<property name="LogActionResult" column="ActionResult" type="Agile.Solutions.Infrastructure.Membership.Repositories.NHibernate.Enum.LogActionResultEnumStringType, Agile.Solutions.Infrastructure.Membership"  />-->
+    <property name="LogActionResult" column="ActionResult"  />
+    <!--<property name="Level" column="LogLevel" type="Agile.Solutions.Infrastructure.Membership.Repositories.NHibernate.Enum.LevelEnumStringType, Agile.Solutions.Infrastructure.Membership"  />-->
+    <property name="Level" column="LogLevel"   />
+    <property name="Description" column="Description" type="string" length="300"/>
+    <many-to-one name="Right" class="Right" column="RightId" outer-join="true" not-found="ignore"  >
+    </many-to-one>
+    <property name="EventId" column="EventId" type="int" />
+    <property name="Date" column="LogDate" type="DateTime" />
+    <property name="ClientIP" column="ClientIp" type="AnsiString" length="15" />
+    <property name="UserAgent" column="UserAgent" type="AnsiString" length="200" />
+    <property name="UserName" column="UserName"  type="AnsiString" length="100" />
+   
+    <!--<property name="ControllerName" column="ControllerName"  type="string" length="100" />-->
+    <!--property name="ActionName" column="ActionName"  type="string" length="100" />-->-->
+    <many-to-one name="Action" class="LogAction" column="ActionId"  >
+    </many-to-one>
+
+  </class>
+
+</hibernate-mapping>

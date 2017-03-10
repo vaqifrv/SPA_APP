@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Agile.Solutions.Infrastructure.Membership"
+                   namespace="Agile.Solutions.Infrastructure.Membership.Domain.Entities">
+
+  <class name="Log" table="LOGS" >
+    <id name="Id" column="LOG_ID" type="int">
+      <generator class ="identity">
+        <param name="sequence">LOGS_SEQ</param>
+      </generator>
+    </id>
+    
+    <!--<property name="ActionId" column="ACTION_ID" type="int" />-->
+
+    <property name="LogActionResult" column="ACTION_RESULT"    />
+    <property name="Level" column="LOG_LEVEL" />
+    <property name="Description" column="DESCRIPTION" type="string" length="300"/>
+    <many-to-one name="Right" class="Right" column="RIGHT_ID" outer-join="true" not-found="ignore"  >
+    </many-to-one>
+    <property name="EventId" column="EVENT_ID" type="int" />
+    <property name="Date" column="LOG_DATE" type="DateTime" /> <!--timestamp-->
+    <property name="ClientIP" column="CLIENT_IP" type="AnsiString" length="15" />
+    <property name="UserAgent" column="USER_AGENT" type="AnsiString" length="200" />
+    <property name="UserName" column="USERNAME"  type="AnsiString" length="100" />
+    
+    <!--<property name="ControllerName" column="CONTROLLERNAME"  type="string" length="100" />-->
+    <!--<property name="ActionName" column="ACTIONNAME"  type="string" length="100" />-->
+
+    <many-to-one name="Action" class="LogAction" column="ACTION_ID"  >
+    </many-to-one>
+
+  </class>
+
+</hibernate-mapping>

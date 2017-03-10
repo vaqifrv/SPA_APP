@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Agile.Solutions.Infrastructure.Membership"
+                   namespace="Agile.Solutions.Infrastructure.Membership.Domain.Entities">
+
+  <class name="User" table="Users">
+    <id name="Username" column="UserName" type="AnsiString" length="50">
+    </id>
+
+    <property name="Password" column="Password" type="AnsiString" length="40" not-null="true" />
+    <property name="IsEnabled" column="IsEnabled" type="boolean"  />
+    <property name="IsDeleted" column="IsDeleted" type="boolean" not-null="true"/>
+    <property name="DisabledDate" column="DisabledDate" type="Date" />
+
+    <!--<set name="Roles" table="USER_ROLES" inverse="true" generic="true">
+      <key>
+        <column name="USERNAME" />
+      </key>
+      <many-to-many class="Role" fetch="join">
+        <column name="ROLE_ID" />
+      </many-to-many>
+    </set>-->
+
+    <bag name="Roles" table="UserRoles">
+      <key>
+        <column name="UserName" />
+      </key>
+      <many-to-many class="Role" fetch="join" >
+        <column name="RoleId" />
+      </many-to-many>
+    </bag>
+  </class>
+
+</hibernate-mapping>
