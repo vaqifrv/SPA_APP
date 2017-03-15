@@ -17,6 +17,8 @@ namespace App.Membership.Repositories.NHibernate.Mappings.Fluent.Oracle {
 			Map(x => x.IsEnabled).Column("IS_ENABLED");
 			Map(x => x.IsDeleted).Column("IS_DELETED").Not.Nullable();
 			Map(x => x.DisabledDate).Column("DISABLED_DATE");
+
+            HasManyToMany(x => x.Roles).Cascade.All().Table("UserRoles");
         }
     }
 }

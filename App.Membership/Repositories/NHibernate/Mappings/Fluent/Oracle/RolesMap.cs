@@ -15,6 +15,10 @@ namespace App.Membership.Repositories.NHibernate.Mappings.Fluent.Oracle {
 			Id(x => x.Id).GeneratedBy.Assigned().Column("ROLE_ID");
 			Map(x => x.Name).Column("ROLE_NAME");
 			Map(x => x.Description).Column("ROLE_DESC");
+
+            HasManyToMany(x => x.Users).Cascade.All().Inverse().Table("UserRoles");
+
+            HasManyToMany(x => x.Rights).Cascade.All().Table("RoleRights");
         }
     }
 }

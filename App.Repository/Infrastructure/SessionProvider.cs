@@ -32,7 +32,7 @@ namespace App.Repository.Infrastructure
                     m.FluentMappings.AddFromAssemblyOf<TestMap>();
                 })
                 //shcema update ucun
-                //.ExposeConfiguration(c => new SchemaUpdate(c).Execute(false, true)) 
+                .ExposeConfiguration(c => new SchemaUpdate(c).Execute(false, true)) 
                   //schema create ucun   
                 //.ExposeConfiguration(c => new SchemaExport(c).Create(true, true)) 
                 .BuildConfiguration();

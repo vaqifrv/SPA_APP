@@ -14,7 +14,7 @@ using App.Web.UI.Areas.Security.Models;
 
 namespace App.Web.UI.Areas.Security.Controllers.API
 {
-    [Authorize]
+    //[Authorize]
     [RoutePrefix("api/user")]
     public class UserController : ApiController
     {
