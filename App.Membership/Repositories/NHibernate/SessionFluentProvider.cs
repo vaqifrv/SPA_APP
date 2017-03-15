@@ -39,9 +39,9 @@ namespace App.Membership.Repositories.NHibernate
                m.FluentMappings.AddFromAssemblyOf<UserMap>();
            })
            //shcema update ucun
-           //.ExposeConfiguration(c => new SchemaUpdate(c).Execute(false, true)) 
+           .ExposeConfiguration(c => new SchemaUpdate(c).Execute(false, true)) 
            //schema create ucun   
-           .ExposeConfiguration(c => new SchemaExport(c).Create(true, true)) 
+           //.ExposeConfiguration(c => new SchemaExport(c).Create(true, true)) 
            .BuildConfiguration();
 
             cfg.EventListeners.MergeEventListeners = new IMergeEventListener[]
