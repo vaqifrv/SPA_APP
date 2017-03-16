@@ -38,8 +38,10 @@ namespace App.Membership.Repositories.NHibernate
            {
                m.FluentMappings.AddFromAssemblyOf<UserMap>();
            })
-           //shcema update ucun
-           .ExposeConfiguration(c => new SchemaUpdate(c).Execute(false, true)) 
+             //shcema update ucun
+#if DEBUG
+             .ExposeConfiguration(c => new SchemaUpdate(c).Execute(false, true))
+#endif
            //schema create ucun   
            //.ExposeConfiguration(c => new SchemaExport(c).Create(true, true)) 
            .BuildConfiguration();
@@ -56,34 +58,42 @@ namespace App.Membership.Repositories.NHibernate
 
         private static void CreateDefaultUserAndRole()
         {
-
-            if (RepositoryFactory.GetUserRepository().IsNewDatabase().Value)
+            try
             {
-                AgMembershipProvider provider = new AgMembershipProvider();
-                System.Web.Security.MembershipCreateStatus status;
-                provider.CreateUser("admin", "admin", String.Empty, String.Empty, string.Empty, true, "admin", out status);
+                if (RepositoryFactory.GetUserRepository().IsNewDatabase().Value)
+                {
+                    AgMembershipProvider provider = new AgMembershipProvider();
+                    System.Web.Security.MembershipCreateStatus status;
+                    provider.CreateUser("admin", "admin", String.Empty, String.Empty, string.Empty, true, "admin", out status);
 
-                AgRoleProvider roleProvider = new AgRoleProvider();
-                if (!roleProvider.RoleExists("Administrators"))
-                {
-                    roleProvider.CreateRole("Administrators");
-                }
-                if (!roleProvider.IsUserInRole("admin", "Administrators"))
-                {
-                    roleProvider.AddUsersToRoles(new[] { "admin" }, new string[] { "Administrators" });
-                }
+                    AgRoleProvider roleProvider = new AgRoleProvider();
+                    if (!roleProvider.RoleExists("Administrators"))
+                    {
+                        roleProvider.CreateRole("Administrators");
+                    }
+                    if (!roleProvider.IsUserInRole("admin", "Administrators"))
+                    {
+                        roleProvider.AddUsersToRoles(new[] { "admin" }, new string[] { "Administrators" });
+                    }
 
-                ILogActionRepository repository = RepositoryFactory.GetLogActionRepository();
-                if (repository.GetAllLogActions().TotalItems == 0)
-                {
-                    repository.Add(new LogAction { Id = 1, Name = "ValidateUser" });
-                    repository.Add(new LogAction { Id = 2, Name = "ChangePassword" });
-                    repository.Add(new LogAction { Id = 3, Name = "HasAccess" });
-                    repository.Add(new LogAction { Id = 4, Name = "Login" });
-                    repository.Add(new LogAction { Id = 5, Name = "Logout" });
-                    repository.Add(new LogAction { Id = 6, Name = "ChangeUserEnabledStatus" });
+                    //ILogActionRepository repository = RepositoryFactory.GetLogActionRepository();
+                    //if (repository.GetAllLogActions().TotalItems == 0)
+                    //{
+                    //    repository.Add(new LogAction { Id = 1, Name = "ValidateUser" });
+                    //    repository.Add(new LogAction { Id = 2, Name = "ChangePassword" });
+                    //    repository.Add(new LogAction { Id = 3, Name = "HasAccess" });
+                    //    repository.Add(new LogAction { Id = 4, Name = "Login" });
+                    //    repository.Add(new LogAction { Id = 5, Name = "Logout" });
+                    //    repository.Add(new LogAction { Id = 6, Name = "ChangeUserEnabledStatus" });
+                    //}
                 }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
         }
 
         public static ISessionFactory GetSessionFactory(string schema)

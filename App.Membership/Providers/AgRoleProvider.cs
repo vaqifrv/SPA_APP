@@ -39,6 +39,10 @@ namespace App.Membership.Providers
             {
                 var user = _userRepository.FindBy(username);
                 if (user.Value == null) continue;
+                if (user.Value.Roles == null)
+                {
+                    user.Value.Roles = new List<Role>();
+                }
                 if (roles?.List != null)
                 {
                     foreach (var role in roles.List)
@@ -180,7 +184,7 @@ namespace App.Membership.Providers
         public override bool IsUserInRole(string username, string roleName)
         {
             var user = _userRepository.FindBy(username);
-            var isUserInRole = user?.Value?.Roles.Any(x => x.Name == roleName);
+            var isUserInRole = user?.Value?.Roles?.Any(x => x.Name == roleName);
             return isUserInRole != null && (bool)isUserInRole;
         }
 
@@ -228,7 +232,7 @@ namespace App.Membership.Providers
 
         public override bool RoleExists(string roleName)
         {
-            return _roleRepository.FindByName(roleName) != null;
+            return _roleRepository.FindByName(roleName).Value != null;
         }
     }
 }
