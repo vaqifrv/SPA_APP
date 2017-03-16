@@ -26,7 +26,7 @@ namespace App.Repository.Infrastructure
             XmlConfigurator.Configure();
 
             var cfg = Fluently.Configure()
-                .Database(MsSqlConfiguration.MsSql2012.ConnectionString(c => c.FromConnectionStringWithKey("appConectionString")))
+                .Database(MsSqlConfiguration.MsSql2012.ConnectionString(c => c.FromConnectionStringWithKey("appConnectionString")))
                 .Mappings(m =>
                 {
                     m.FluentMappings.AddFromAssemblyOf<TestMap>();
@@ -40,10 +40,10 @@ namespace App.Repository.Infrastructure
             //var cfg = Fluently.Configure()
             //    .Database(OracleClientConfiguration.Oracle10
             //        .Dialect<CustomOracleDialect>()
-            //        .ConnectionString(c => c.FromConnectionStringWithKey("appConectionString")))
+            //        .ConnectionString(c => c.FromConnectionStringWithKey("appConnectionString")))
             //    .Mappings(m =>
             //    {
-            //        m.FluentMappings.AddFromAssemblyOf<CountryMap>();
+            //        m.FluentMappings.AddFromAssemblyOf<TestMap>();
             //    })
             //    .ExposeConfiguration(c => new SchemaUpdate(c).Execute(false, true)) //shcema update ucun
             //                                                                        //.ExposeConfiguration(c => new SchemaExport(c).Create(true, true)) //schema create ucun                    

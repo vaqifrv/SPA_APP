@@ -33,7 +33,7 @@ namespace App.Membership.Repositories.NHibernate
             XmlConfigurator.Configure();
 
             var cfg = Fluently.Configure()
-           .Database(MsSqlConfiguration.MsSql2012.ConnectionString(c => c.FromConnectionStringWithKey("appConectionString")))
+           .Database(MsSqlConfiguration.MsSql2012.ConnectionString(c => c.FromConnectionStringWithKey("appConnectionString")))
            .Mappings(m =>
            {
                m.FluentMappings.AddFromAssemblyOf<UserMap>();
