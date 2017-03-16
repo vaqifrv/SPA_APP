@@ -1,8 +1,9 @@
-using System; 
-using System.Collections.Generic; 
+using System;
+using System.Collections.Generic;
 using System.Text;
 using App.Membership.Domain;
 using FluentNHibernate.Mapping;
+using App.Core.Infrastructure;
 
 namespace App.Membership.Repositories.NHibernate.Mappings.Fluent.Oracle {
     
@@ -12,7 +13,11 @@ namespace App.Membership.Repositories.NHibernate.Mappings.Fluent.Oracle {
         public LogMap() {
 			Table("LOGS");
 			LazyLoad();
-			Id(x => x.Id).GeneratedBy.Assigned().Column("LOG_ID");
+			Id(x => x.Id)
+                .GeneratedBy.Custom<EntityGuidIdGenerator>()
+                .Not.Nullable()
+                .Column("LOG_ID")
+                .CustomSqlType("NVARCHAR2(32)");
 			References(x => x.Action).Column("ACTION_ID");
 			Map(x => x.LogActionResult).Column("ACTION_RESULT");
 			Map(x => x.Level).Column("LOG_LEVEL");
