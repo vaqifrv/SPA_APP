@@ -20,7 +20,7 @@ namespace App.Web.UI.Infrastructure
         {
             //session
             Bind<ISessionScopeProvider>().To<MVCSessionScopeProvider>();
-            Bind<ISession>().ToMethod(ctx => SessionProvider.GetSession("appConectionString"));
+            Bind<ISession>().ToMethod(ctx => SessionProvider.GetSession("appConnectionString"));
 
 
 
