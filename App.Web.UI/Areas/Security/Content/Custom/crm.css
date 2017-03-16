@@ -1,0 +1,27 @@
+﻿.img-grid
+{
+	margin:0;
+	width:40px !important;
+	height:40px !important;
+}
+
+.img-thumbnail .zoom {
+  background-color: #0088cc;
+}
+.img-thumbnail .zoom {
+  background: #CCC;
+  border-radius: 100%;
+  bottom: 8px;
+  color: #FFF;
+  display: block;
+  height: 30px;
+  padding: 6px;
+  position: absolute;
+  right: 8px;
+  text-align: center;
+  width: 30px;
+}
+
+.fancybox-overlay {
+    z-index: 10500 !important;
+}

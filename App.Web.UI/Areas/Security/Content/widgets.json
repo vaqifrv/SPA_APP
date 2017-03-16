@@ -1,0 +1,58 @@
+﻿[
+  {
+    "widgetTitle": "Appointments",
+    "sizeX": 4,
+    "sizeY": 6,
+    "minSizeX": 3,
+    "minSizeY": 6,
+    "col": 0,
+    "row": 0,
+    "template": "<appointment-calendar on-event-click='eventClick'  person-id='$routeParams.entityId' default-view='agendaWeek'></appointment-calendar>",
+    "templateUrl": null,
+    "settingsTemplateUrl": "/Angular/widgets/agileWidget/agileWidgetUISettings.html",
+    "settingsController": "AgileWidgetSettingsCtrl",
+	"area": "crm"
+  },
+  {
+    "widgetTitle": "Payments",
+    "sizeX": 12,
+    "sizeY": 6,
+    "minSizeX": 2,
+    "minSizeY": 2,
+    "col": 0,
+    "row": 0,
+    "template": "<payments-view on-event-click='eventClick' person-id='$routeParams.entityId' control='control' show-buttons='false' />",
+    "templateUrl": null,
+    "settingsTemplateUrl": "/Angular/widgets/agileWidget/agileWidgetUISettings.html",
+    "settingsController": "AgileWidgetSettingsCtrl",
+	"area": "finance"
+  },
+  {
+    "widgetTitle": "Visits",
+    "sizeX": 12,
+    "sizeY": 6,
+    "minSizeX": 2,
+    "minSizeY": 2,
+    "col": 0,
+    "row": 0,
+    "template": "<ag-visits on-event-click='eventClick' person-id='$routeParams.entityId' control='control' show-buttons='false' />",
+    "templateUrl": null,
+    "settingsTemplateUrl": "/Angular/widgets/agileWidget/agileWidgetUISettings.html",
+    "settingsController": "AgileWidgetSettingsCtrl",
+	"area": "finance"
+  },
+  {
+    "widgetTitle": "Invoices",
+    "sizeX": 12,
+    "sizeY": 6,
+    "minSizeX": 2,
+    "minSizeY": 2,
+    "col": 0,
+    "row": 0,
+    "template": "<ag-invoices person-id='$routeParams.entityId' control='control' show-buttons='false' />",
+    "templateUrl": null,
+    "settingsTemplateUrl": "/Angular/widgets/agileWidget/agileWidgetUISettings.html",
+    "settingsController": "AgileWidgetSettingsCtrl",
+	"area": "finance"
+  }
+]

@@ -1,0 +1,59 @@
+﻿/*https://css-tricks.com/snippets/css/media-queries-for-standard-devices/*/
+/*@media (min-width: 700px) {
+
+}*/
+@media only screen and (max-width: 320px)
+{
+	.profil
+	{
+		width: 150px;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px)
+{
+	.profil
+	{
+		width: 250px;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px)
+{
+	.profil
+	{
+		width: 350px;
+		border: none;
+	}
+}
+
+@media only screen and (min-width: 768px)
+{
+	.profil
+	{
+		width: 500px;
+		/*height:375px;*/
+		border: none;
+	}
+}
+
+.btn-primary-addon {
+    color: #fff;
+    background-color: #00BCD4 !important;
+    border-color: #00a5bb !important;
+}
+
+.takeImage
+{
+	width: 100%;
+	border-radius: 180px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.22);
+}
+/*@media only screen and (min-width: 900px) 
+{
+	.profil
+	{
+		width: 600px;
+		border:none;
+	}
+}*/

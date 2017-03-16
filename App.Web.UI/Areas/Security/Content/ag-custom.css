@@ -1,0 +1,304 @@
+﻿/* for collapsed menu button */
+.page-header.navbar .menu-toggler.sidebar-toggler {
+    float: none;
+    margin: 30px 120px 0px;
+}
+
+
+.ag-table-case-list .btn, .ag-little-btn {
+    padding: 3px 4px 3px !important;
+    font-size: 11px !important;
+    text-transform: capitalize !important;
+}
+
+
+.ag-table-case-list tr:hover {
+    cursor: pointer;
+}
+
+
+.ag-table-case-list tr:focus {
+    background-color: green !important;
+}
+
+.ag-table-employee-list td {
+    vertical-align: middle !important;
+}
+
+
+.mfp-bg {
+    z-index: 9999999;
+}
+
+.mfp-wrap {
+    z-index: 99999999;
+}
+
+.mfp-img {
+    /*padding: 40px !important;*/
+}
+
+.delete {
+    padding: 3px 12px 3px;
+    font-size: 11px;
+    text-transform: capitalize;
+}
+
+.mfp-gallery {
+    z-index: 9996;
+}
+
+.ag-yellow {
+    background-color: #f4d03f;
+    color: black;
+}
+
+.ag-red {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.ag-orange {
+    background-color: orange;
+    color: #fff;
+}
+
+a, .btn, input[type='submit'], button {
+    text-transform: capitalize !important;
+}
+
+.portlet .portlet-title .actions a {
+    /*float:left;
+  padding-left:20px !important;*/
+    z-index: 1080 !important;
+}
+
+.ag-attachment-info {
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+    .ag-attachment-info table tr td:last-child {
+        padding-left: 10px;
+    }
+
+    .ag-attachment-info table tr td {
+        padding: 2px;
+    }
+
+.dt-buttons {
+    text-align: center !important;
+    float: none !important;
+}
+
+.ag-add-contact-span:hover, .ag-remove-contact-span:hover {
+    cursor: pointer;
+}
+
+.ag-add-contact-span {
+    background: green;
+    border: 1px solid green;
+}
+
+.ag-remove-contact-span {
+    background: #ba1111;
+    border: 1px solid #ba1111;
+}
+
+    .ag-add-contact-span i, .ag-remove-contact-span i {
+        color: white;
+    }
+
+.ag-employee-profile-picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.ag-employee-profile-picture .thumbnail {
+    border: none !important;
+}
+
+.ag-loading {
+    height: 3px;
+    color: green;
+    background-color: green;
+    width: 0;
+}
+
+.ag-checkbox {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.ag-radio {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.ag-attachment-table td {
+    vertical-align: middle !important;
+}
+
+.ag-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+span.select2-selection {
+    border-radius: 0 !important;
+}
+
+.ag-table-centered thead tr th {
+    padding: 4px !important;
+    /*font-size: 13px !important;*/
+    text-align: center !important;
+}
+
+.ag-table-centered tr td {
+    padding: 4px !important;
+    /*font-size: 13px !important;*/
+    text-align: center !important;
+}
+
+
+/* change layout style */
+
+.page-sidebar {
+    width: 200px !important;
+}
+
+.page-content {
+    margin-left: 205px !important;
+    padding: 0px 0 0 10px !important;
+}
+
+/*.page-container {
+    padding: 10px 10px 0 !important; 
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.portlet.light {
+    padding: 10px 10px 10px !important;
+}*/
+
+.ag-row-urgent {
+    background: #FF988D;
+}
+
+.ag-row-undercontrol {
+    background: #F6C401;
+}
+
+.display-selected {
+    cursor: pointer;
+}
+
+.ag-bold td, .ag-bold td i {
+    font-weight: 900;
+}
+
+.icon-isviewed {
+    cursor: pointer;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+}
+
+.ag-field-validation-error {
+    /* label classes */
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    /* label danger classes */
+    background-color: #d9534f;
+}
+
+.ag-hover:hover {
+    cursor: pointer;
+}
+
+.ag-table-bordered > tbody > tr > td, .ag-table-bordered > tbody > tr > th, .ag-table-bordered > tfoot > tr > td, .ag-table-bordered > tfoot > tr > th, .ag-table-bordered > thead > tr > td, .ag-table-bordered > thead > tr > th {
+    border: 1px solid #e7ecf1;
+}
+
+.ag-table > tbody > tr > th, .ag-table > tfoot > tr > td, .ag-table > tfoot > tr > th, .ag-table > thead > tr > td, .ag-table > thead > tr > th {
+    padding: 8px;
+    line-height: 1.42857;
+    vertical-align: top;
+    border-top: 1px solid #e7ecf1;
+}
+
+.ag-table th {
+    font-size: 14px;
+}
+
+.ag-blur-table {
+    -ms-opacity: 0.3;
+    opacity: 0.3;
+}
+
+.ag-layout-loader {
+    padding: 25px 12px 24px !important;
+    cursor: wait;
+}
+
+    .ag-layout-loader .loader {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+        .ag-layout-loader .loader .circle {
+            width: 30px !important;
+            height: 30px !important;
+        }
+
+            .ag-layout-loader .loader .circle:after {
+                background: #fff !important;
+            }
+
+.todo-container .todo-projects-item.todo-active:after {
+    right: -13px !important;
+    top: 25px !important;
+    border-left: 20px solid #efefef !important;
+}
+.todo-container .todo-projects-item.todo-active {
+    background: #efefef !important;
+}
+
+.ag-sh-kartocka li {
+    float: left !important;
+    width: initial !important;
+}
+
+.ag-dynamic-table th {
+    padding: 1px !important;
+    font-size: 12px !important;
+}
+
+.form-control {
+    padding: 6px 4px !important;
+}
+.ag-anonimous-td {
+    background: black;
+    color: white;
+    font-weight: 600;
+}
+.ag-coordinated-assignment {
+    background: #bac3d0;
+    color: white!important;
+    border: 1px solid #bac3d0;
+}
