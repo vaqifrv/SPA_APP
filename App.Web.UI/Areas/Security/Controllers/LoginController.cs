@@ -14,7 +14,7 @@ namespace App.Web.UI.Areas.Security.Controllers
     {
 
         private readonly IRightRepository _rightRepository;
-        
+
         //
         // GET: /Login/
         private string SSOServer
@@ -119,7 +119,7 @@ namespace App.Web.UI.Areas.Security.Controllers
                 returnUrl = service.PostLoginToSso(returnUrl, userName);
                 #endregion
 
-              
+
 
                 return Redirect(returnUrl);
             }
@@ -171,7 +171,5 @@ namespace App.Web.UI.Areas.Security.Controllers
                 return RedirectToAction("Index", "Home");
             }
         }
-
-
     }
 }
