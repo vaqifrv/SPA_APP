@@ -1,0 +1,6 @@
+﻿body {
+}
+
+.app-modal-window .modal-dialog {
+  z-index: 15000;
+}

@@ -1,0 +1,21 @@
+﻿{
+"records": [
+  {
+    "Date" : "2015-07-07",
+    "Revision" : "Alfa v0.1",
+	"Title" : "ClinicMS - ilk alfa versiya",
+	"Description" : "<p>Proqramın ilk versiyası serverimizə yerləşdirilərək istifadəyə verildi. Proqramın istifadəçi təlimatı saytımızda yerləşdirilib. </p>Mövcud olan əsas modullar: <ul><li>Məlumat kitabçaları</li> <li>CRM</li> <li>Maliyyə</li></ul>",
+    "ImageUrl": "",
+    "ReleaseStatus": "Released"
+  },
+  {
+    "Date" : "2015-07-22",
+    "Revision" : "Alfa v0.2",
+	"Title" : "Alfa v0.2 - Yeniliklər",
+	"Description" : "<ul><li><span class=\"label label-success\">new</span> Əsas maliyyə və statistik göstəricilər səhifəsi (dashboard)</li><li><span class=\"label label-success\">new</span> Dişlərin sxematik təsviri</li><li>Əvvəlki versiyadakı problemlərin həlli</li></ul>",
+    "ThumbImageUrl": "/Content/images/screens/az/thumbs/scr_teeth_charts_thumb.png",
+    "ImageUrl": "/Content/images/screens/az/scr_teeth_charts.png",
+    "ReleaseStatus": "Planned"
+  }
+]
+}

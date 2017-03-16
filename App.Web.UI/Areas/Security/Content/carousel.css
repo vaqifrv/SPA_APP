@@ -1,0 +1,333 @@
+﻿.animation-delay-1 {
+  -webkit-animation-delay: .1s !important;
+  animation-delay: .1s !important;
+}
+.animation-delay-2 {
+  -webkit-animation-delay: .2s !important;
+  animation-delay: .2s !important;
+}
+.animation-delay-3 {
+  -webkit-animation-delay: .3s !important;
+  animation-delay: .3s !important;
+}
+.animation-delay-4 {
+  -webkit-animation-delay: .4s !important;
+  animation-delay: .4s !important;
+}
+.animation-delay-5 {
+  -webkit-animation-delay: .5s !important;
+  animation-delay: .5s !important;
+}
+.animation-delay-6 {
+  -webkit-animation-delay: .6s !important;
+  animation-delay: .6s !important;
+}
+.animation-delay-7 {
+  -webkit-animation-delay: .7s !important;
+  animation-delay: .7s !important;
+}
+.animation-delay-8 {
+  -webkit-animation-delay: .8s !important;
+  animation-delay: .8s !important;
+}
+.animation-delay-9 {
+  -webkit-animation-delay: .9s !important;
+  animation-delay: .9s !important;
+}
+.animation-delay-10 {
+  -webkit-animation-delay: 1s !important;
+  animation-delay: 1s !important;
+}
+.animation-delay-11 {
+  -webkit-animation-delay: 1.1s !important;
+  animation-delay: 1.1s !important;
+}
+.animation-delay-12 {
+  -webkit-animation-delay: 1.2s !important;
+  animation-delay: 1.2s !important;
+}
+.animation-delay-13 {
+  -webkit-animation-delay: 1.3s !important;
+  animation-delay: 1.3s !important;
+}
+.animation-delay-14 {
+  -webkit-animation-delay: 1.4s !important;
+  animation-delay: 1.4s !important;
+}
+.animation-delay-15 {
+  -webkit-animation-delay: 1.5s !important;
+  animation-delay: 1.5s !important;
+}
+.animation-delay-16 {
+  -webkit-animation-delay: 1.6s !important;
+  animation-delay: 1.6s !important;
+}
+.animation-delay-17 {
+  -webkit-animation-delay: 1.7s !important;
+  animation-delay: 1.7s !important;
+}
+.animation-delay-18 {
+  -webkit-animation-delay: 1.8s !important;
+  animation-delay: 1.8s !important;
+}
+.animation-delay-19 {
+  -webkit-animation-delay: 1.9s !important;
+  animation-delay: 1.9s !important;
+}
+.animation-delay-20 {
+  -webkit-animation-delay: 2s !important;
+  animation-delay: 2s !important;
+}
+.animation-delay-21 {
+  -webkit-animation-delay: 2.1s !important;
+  animation-delay: 2.1s !important;
+}
+.animation-delay-22 {
+  -webkit-animation-delay: 2.2s !important;
+  animation-delay: 2.2s !important;
+}
+.animation-delay-23 {
+  -webkit-animation-delay: 2.3s !important;
+  animation-delay: 2.3s !important;
+}
+.animation-delay-24 {
+  -webkit-animation-delay: 2.4s !important;
+  animation-delay: 2.4s !important;
+}
+.animation-delay-25 {
+  -webkit-animation-delay: 2.5s !important;
+  animation-delay: 2.5s !important;
+}
+.animation-delay-26 {
+  -webkit-animation-delay: 2.6s !important;
+  animation-delay: 2.6s !important;
+}
+.animation-delay-27 {
+  -webkit-animation-delay: 2.6s !important;
+  animation-delay: 2.6s !important;
+}
+.animation-delay-28 {
+  -webkit-animation-delay: 2.8s !important;
+  animation-delay: 2.8s !important;
+}
+.animation-delay-29 {
+  -webkit-animation-delay: 2.9s !important;
+  animation-delay: 2.9s !important;
+}
+.animation-delay-30 {
+  -webkit-animation-delay: 3s !important;
+  animation-delay: 3s !important;
+}
+
+/*-------------------------------------------------------------------*/
+/* Carousel razon */
+/*-------------------------------------------------------------------*/
+.carousel-section-e {
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+.carousel-e {
+  background-color: #0099da;
+}
+.carousel-e {
+  background-color: #0099da;
+  background-color: rgba(0, 153, 218, 0.9);
+}
+.carousel-e .carousel-caption {
+  position: static;
+  text-align: left;
+}
+.carousel-e .carousel-img-wrap {
+  display: table-row;
+}
+.carousel-e .carousel-img {
+  height: 400px;
+  display: table-cell;
+  vertical-align: middle;
+  overflow: hidden;
+  display: static;
+}
+.carousel-e .carousel-img img {
+  width: 100%;
+}
+.carousel-e .carousel-indicators {
+  bottom: 0px !important;
+}
+.carousel-e .carousel-indicators li {
+  margin: 0 2px;
+}
+.carousel-section {
+  background-image: url("/Content/images/manual/slide_back.jpg");
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+.carousel-razon {
+  background-color: #0099da;
+  background-color: rgba(0, 135, 193, 0.9);
+}
+.carousel-razon-dark {
+  background-color: #444;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.carousel-razon .carousel-caption {
+  position: static;
+  text-align: left;
+}
+.carousel-razon .carousel-img-wrap {
+  display: table-row;
+}
+.carousel-razon .carousel-img {
+  height: 400px;
+  display: table-cell;
+  vertical-align: middle;
+  overflow: hidden;
+  display: static;
+}
+.carousel-razon .carousel-img img {
+  width: 100%;
+}
+.carousel-razon .carousel-indicators {
+  bottom: 0px !important;
+}
+.carousel-razon .carousel-indicators li {
+  margin: 0 2px;
+}
+.carousel-text span {
+  color: #cdff76;
+}
+.carousel-title {
+  margin: 20px 0 10px 0;
+  padding: 0;
+  font-size: 2.2em;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  line-height: 1.4em;
+}
+.crousel-subtitle {
+  font-size: 1.8em;
+  color: #cdff76;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+}
+.carousel-list {
+  margin: 20px 0;
+}
+.carousel-list li {
+  color: #fff;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.carousel-list li i {
+  font-size: 1.6em;
+  margin-right: 20px;
+  color: #fff;
+}
+.carousel-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  filter: alpha(opacity=80);
+  opacity: .8;
+}
+.carousel-control.left {
+  background-image: none;
+  -webkit-filter: none;
+          filter: none;
+}
+.carousel-control.right {
+  right: 0;
+  left: auto;
+  background-image: none;
+  -webkit-filter: none;
+          filter: none;
+}
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #fff;
+  text-decoration: none;
+  filter: alpha(opacity=100);
+  outline: none;
+  opacity: 1;
+}
+.carousel-control .icon-prev,
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  position: absolute;
+  top: 95%;
+  z-index: 5;
+  display: inline-block;
+}
+.carousel-control .icon-prev,
+.carousel-control .glyphicon-chevron-left {
+  left: 50%;
+}
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-right {
+  right: 50%;
+}
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  font-family: serif;
+}
+.carousel-control .icon-prev:before {
+  content: '\2039';
+}
+.carousel-control .icon-next:before {
+  content: '\203a';
+}
+@media (max-width: 767px) {
+  .carousel-indicators {
+    top: 10px !important;
+    bottom: auto !important;
+  }
+  .carousel-title {
+    margin: 10px 0 5px 0;
+    padding: 0;
+    font-size: 2em;
+    line-height: 1.3em;
+  }
+  .crousel-subtitle {
+    font-size: 1.4em;
+  }
+  .carousel-text p {
+    margin-bottom: 10px;
+  }
+  .carousel-list {
+    margin: 5px 0 0 0;
+  }
+  .carousel-list li {
+    font-size: 1.2em;
+    line-height: 1em;
+    margin-bottom: 4px;
+  }
+  .carousel-list li span {
+    padding: 5px;
+  }
+  .carousel-list li i {
+    width: 42px;
+    padding: 5px;
+  }
+  .carousel-control {
+    left: auto;
+    bottom: auto;
+    top: 20px;
+  }
+  .carousel-control.left {
+    right: 50px;
+  }
+  .carousel-control.right {
+    right: 0;
+  }
+}

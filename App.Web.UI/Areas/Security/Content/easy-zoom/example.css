@@ -1,0 +1,48 @@
+
+
+.ag-zoom ul, .ag-zoom ol {
+	/*padding-left: 1.5em;*/
+}
+
+.ag-zoom a img {
+	border: 0;
+}
+
+
+.container {
+	width: 640px;
+	margin: 0 auto;
+	padding: 2em 2em 4em;
+	background: #fff;
+	box-shadow: 0 0 5em rgba(0, 0, 0, .1);
+}
+
+.container section + section {
+	margin-top: 3em;
+	border-top: 1px solid #ccc;
+	padding-top: 1em;
+}
+
+.thumbnails {
+	overflow: hidden;
+	margin: 1em 0;
+	padding: 0;
+	text-align: center;
+}
+
+.thumbnails li {
+	display: inline-block;
+	/*width: 140px;*/
+	margin: 3px 5px;
+}
+
+.thumbnails img {
+	display: block;
+	width:50px;
+    height:50px;
+}
+
+.toggle {
+	display: block;
+	margin: 10px auto 1.5em;
+}
