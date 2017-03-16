@@ -1,12 +1,10 @@
-using System; 
-using System.Collections.Generic; 
-using System.Text;
 using App.Membership.Domain;
 using FluentNHibernate.Mapping;
 
-namespace App.Membership.Repositories.NHibernate.Mappings.Fluent.Oracle {
-    
-    
+namespace App.Membership.Repositories.NHibernate.Mappings.Fluent.Oracle
+{
+
+
     public class UserMap : ClassMap<User> {
         
         public UserMap() {
