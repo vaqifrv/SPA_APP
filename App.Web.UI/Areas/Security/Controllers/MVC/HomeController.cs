@@ -2,10 +2,11 @@
 
 namespace App.Web.UI.Areas.Security.Controllers.MVC
 {
+    [Authorize]
     public class HomeController : Controller
     {
         // GET: Security/home
-        [Authorize]
+       
         public ActionResult Index()
         {
             return View();
