@@ -3,10 +3,10 @@
     $locationProvider.hashPrefix('');
 
     $routeProvider
-        .when('/home',
+        .when('/dashboard',
         {
             // For Home Page  
-            templateUrl: '/Scripts/angularJs/app/home/views/home.html',
+            templateUrl: '/Areas/Security/AngularJS/home/views/home.html',
             controller: 'HomeCtrl'
         })
         // Security
@@ -58,5 +58,5 @@
             templateUrl: '/Areas/Security/AngularJS/user/views/user-details.html',
             controller: 'UserDetailsCtrl'
         })
-        .otherwise({ redirectTo: '/home' });
+        .otherwise({ redirectTo: '/dashboard' });
 }
