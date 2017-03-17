@@ -11,7 +11,7 @@ namespace App.Web.UI.Areas.Security
             context.MapRoute(
                 "Security_default",
                 "Security/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional },
+                new {controller = "Home", action = "Index", id = UrlParameter.Optional },
                 new[] { "App.Web.UI.Areas.Security.Controllers.MVC" }
             );
         }

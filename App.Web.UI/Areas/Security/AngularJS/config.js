@@ -10,49 +10,49 @@
             controller: 'HomeCtrl'
         })
         // Security
-        .when('/security/right/index',
+        .when('/right/index',
         {
             // RIGHT INDEX
             templateUrl: '/Areas/Security/AngularJS/right/views/right-list.html',
             controller: 'RightListCtrl'
         })
-        .when('/security/right/create/:id?',
+        .when('/right/create/:id?',
         {
             // RIGHT INDEX
             templateUrl: '/Areas/Security/AngularJS/right/views/right-create.html',
             controller: 'RightCreateCtrl'
         })
-        .when('/security/role/index',
+        .when('/role/index',
         {
             // ROLE INDEX
             templateUrl: '/Areas/Security/AngularJS/role/views/role-list.html',
             controller: 'RoleListCtrl'
         })
-        .when('/security/role/create/:id?',
+        .when('/role/create/:id?',
         {
             // ROLE create
             templateUrl: '/Areas/Security/AngularJS/role/views/role-create.html',
             controller: 'RoleCreateCtrl'
         })
-        .when('/security/user/index',
+        .when('/user/index',
         {
             // ROLE INDEX
             templateUrl: '/Areas/Security/AngularJS/user/views/user-list.html',
             controller: 'UserListCtrl'
         })
-        .when('/security/user/edit/:username?',
+        .when('/user/edit/:username?',
         {
             // ROLE INDEX
             templateUrl: '/Areas/Security/AngularJS/user/views/user-edit.html',
             controller: 'UserEditCtrl'
         })
-        .when('/security/user/create',
+        .when('/user/create',
         {
             // ROLE INDEX
             templateUrl: '/Areas/Security/AngularJS/user/views/user-create.html',
             controller: 'UserCreateCtrl'
         })
-        .when('/security/user/details/:username?',
+        .when('/user/details/:username?',
         {
             // ROLE INDEX
             templateUrl: '/Areas/Security/AngularJS/user/views/user-details.html',

@@ -34,9 +34,9 @@
         RoleService.save(model).then(function (data) {
             if (data.Success) {
                 if ($routeParams.id) {
-                    $scope.data.notification = Notification.showSuccess("<b>" + $scope.data.role.Name + "</b> Rol dəyşdirildi.", "Siyahıya qayıt", "/security/role/index");
+                    $scope.data.notification = Notification.showSuccess("<b>" + $scope.data.role.Name + "</b> Rol dəyşdirildi.", "Siyahıya qayıt", "/Security#role/index");
                 } else {
-                    $scope.data.notification = Notification.showSuccess("<b>" + $scope.data.role.Name + "</b> Rol əlavə edildi.", "Siyahıya qayıt", "/security/role/index");
+                    $scope.data.notification = Notification.showSuccess("<b>" + $scope.data.role.Name + "</b> Rol əlavə edildi.", "Siyahıya qayıt", "/Security#role/index");
                     clear();
                 }
             } else {

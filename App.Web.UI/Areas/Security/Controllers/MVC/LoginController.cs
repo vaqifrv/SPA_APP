@@ -104,7 +104,7 @@ namespace App.Web.UI.Areas.Security.Controllers.MVC
         public ActionResult Index(string userName, string password, string returnUrl)
         {
             //returnUrl = NormalizeReturnUrl(returnUrl);
-            returnUrl = "/Security/Home";
+            returnUrl = "/Security";
             var loginStatus = loginProvider.LogIn(userName, password);
             if (loginStatus == LoginStatus.AttemptsExceed)
             {

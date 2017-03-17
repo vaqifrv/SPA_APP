@@ -15,7 +15,7 @@
     $scope.saveAdminEdit = function() {
         UserService.update($scope.data.adminEdit).then(function(data) {
             if (data.Success) {
-                $scope.data.notification = Notification.showSuccess("</b> Məlumatlar dəyşdirildi.", "Siyahıya qayıt", "/security/user/index");
+                $scope.data.notification = Notification.showSuccess("</b> Məlumatlar dəyşdirildi.", "Siyahıya qayıt", "/Security#user/index");
             }
         });
     }

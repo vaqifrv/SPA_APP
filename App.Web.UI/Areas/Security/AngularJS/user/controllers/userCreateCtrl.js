@@ -29,9 +29,9 @@
         UserService.create($scope.data.user).then(function (data) {
             if (data.Success) {
                 if ($routeParams.id) {
-                    $scope.data.notification = Notification.showSuccess("<b>" + $scope.data.user.Username + "</b> İstifadəçi dəyşdirildi.", "Siyahıya qayıt", "/security/user/index");
+                    $scope.data.notification = Notification.showSuccess("<b>" + $scope.data.user.Username + "</b> İstifadəçi dəyşdirildi.", "Siyahıya qayıt", "/Security#user/index");
                 } else {
-                    $scope.data.notification = Notification.showSuccess("<b>" + $scope.data.user.Username + "</b> İstifadəçi əlavə edildi.", "Siyahıya qayıt", "/security/user/index");
+                    $scope.data.notification = Notification.showSuccess("<b>" + $scope.data.user.Username + "</b> İstifadəçi əlavə edildi.", "Siyahıya qayıt", "/Security#user/index");
                     clear();
                 }
             } else {
