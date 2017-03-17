@@ -5,7 +5,7 @@
             data: '='
         },
         replace: true,
-        templateUrl: '/Scripts/AngularJS/app/header/templates/header-dir.html',
+        templateUrl: '/Areas/Security/AngularJS/header/templates/header-dir.html',
         link: function ($scope) {
 
         }

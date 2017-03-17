@@ -103,7 +103,8 @@ namespace App.Web.UI.Areas.Security.Controllers.MVC
         [HttpPost]
         public ActionResult Index(string userName, string password, string returnUrl)
         {
-            returnUrl = NormalizeReturnUrl(returnUrl);
+            //returnUrl = NormalizeReturnUrl(returnUrl);
+            returnUrl = "/Security/Home";
             var loginStatus = loginProvider.LogIn(userName, password);
             if (loginStatus == LoginStatus.AttemptsExceed)
             {

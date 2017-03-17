@@ -5,7 +5,7 @@
             data: '='
         },
         replace: true,
-        templateUrl: '/Scripts/AngularJS/app/left-sidebar/templates/left-sidebar-dir.html',
+        templateUrl: '/Areas/Security/AngularJS/left-sidebar/templates/left-sidebar-dir.html',
         link: function ($scope) {
 
         }

@@ -1,6 +1,6 @@
 ﻿var app = angular.module('AppSecurity', ['ngRoute']);
 
-app.config(['$locationProvider', '$routeProvider', configFunction]);
+app.config(['$locationProvider', '$routeProvider', config]);
 
 
 // ADDING DIRECTIVES
