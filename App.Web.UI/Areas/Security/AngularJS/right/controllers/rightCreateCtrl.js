@@ -27,9 +27,9 @@
         RightService.save($scope.data.right).then(function (data) {
             if (data.Success) {
                 if ($scope.data.right.Id) {
-                    $scope.data.notification = Notification.showSuccess("<b>" + $scope.data.right.Name + "</b> səlahiyyəti dəyşdirildi.", "Siyahıya qayıt", "/security/right/index");
+                    $scope.data.notification = Notification.showSuccess("<b>" + $scope.data.right.Name + "</b> səlahiyyəti dəyşdirildi.", "Siyahıya qayıt", "/Security#right/index");
                 } else {
-                    $scope.data.notification = Notification.showSuccess("<b>" + $scope.data.right.Name + "</b> səlahiyyəti əlavə edildi.", "Siyahıya qayıt", "/security/right/index");
+                    $scope.data.notification = Notification.showSuccess("<b>" + $scope.data.right.Name + "</b> səlahiyyəti əlavə edildi.", "Siyahıya qayıt", "/Security#right/index");
                     clear();
                 }
             } else {

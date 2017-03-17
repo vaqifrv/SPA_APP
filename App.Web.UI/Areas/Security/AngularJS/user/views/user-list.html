@@ -4,7 +4,7 @@
             <span class="caption-subject bold">İstifadəçilər</span>
         </div>
         <div class="actions">
-            <a href="/security/user/create" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Yeni</a>
+            <a href="/Security#user/create" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Yeni</a>
         </div>
     </div>
 
@@ -46,9 +46,9 @@
                             <img ng-src="{{ user.IsLockedOut && '/Areas/Security/Content/images/user_passiv.png' || '/Areas/Security/Content/images/user_aktiv.png'}}" width="20" />
                         </td>
                         <td>
-                            <a href="/security/user/edit/{{user.UserName}}" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-edit"></span>  Düzəliş </a>
+                            <a href="/Security#user/edit/{{user.UserName}}" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-edit"></span>  Düzəliş </a>
                             <button type="button" id="{{ user.UserName }}" value="{{ user.UserName }}" class="btn btn-danger delete btn-xs"><span class="glyphicon glyphicon-remove"></span> Sil </button>
-                            <a href="/security/user/details/{{user.UserName}}" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-eye-open"></span> Ətraflı </a>
+                            <a href="/Security#user/details/{{user.UserName}}" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-eye-open"></span> Ətraflı </a>
                         </td>
                     </tr>
                 </tbody>
