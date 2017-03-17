@@ -84,56 +84,57 @@ namespace App.Membership.Services.Logging
         /// <returns></returns>
         private int WriteLog(LogData logData, string userName)
         {
-            Right right = null;
-            if (!string.IsNullOrEmpty(logData.RightName))
-            {
-                var findByNameResult = _rightRepository.FindByName(logData.RightName);
-                if (!findByNameResult.Success)
-                    throw findByNameResult.Errors[0];
-                right = findByNameResult.Value;
-                if (right == null)
-                    throw new Exception($"Right not found. Please create right for \"{logData.RightName}\"");
-                if (!right.LogEnabled)
-                    return -1;
-            }
+            //Right right = null;
+            //if (!string.IsNullOrEmpty(logData.RightName))
+            //{
+            //    var findByNameResult = _rightRepository.FindByName(logData.RightName);
+            //    if (!findByNameResult.Success)
+            //        throw findByNameResult.Errors[0];
+            //    right = findByNameResult.Value;
+            //    if (right == null)
+            //        throw new Exception($"Right not found. Please create right for \"{logData.RightName}\"");
+            //    if (!right.LogEnabled)
+            //        return -1;
+            //}
 
-            if ((logData.LogActionResult == LogActionResult.NotSet) || (logData.Level == Level.NotSet))
-            {
-                throw new ArgumentNullException($"logData has some invalid fields");
-            }
+            //if ((logData.LogActionResult == LogActionResult.NotSet) || (logData.Level == Level.NotSet))
+            //{
+            //    throw new ArgumentNullException($"logData has some invalid fields");
+            //}
 
-            LoggingContext loggingContext = _logContextProvider.GetLogContext();
-            if (loggingContext == null)
-            {
-                throw new NullReferenceException("LoggingContext is null");
-            }
+            //LoggingContext loggingContext = _logContextProvider.GetLogContext();
+            //if (loggingContext == null)
+            //{
+            //    throw new NullReferenceException("LoggingContext is null");
+            //}
 
-            var logAction = _logActionRepository.FindBy(logData.ActionId);
-            if (logAction.Value == null) { throw new NullReferenceException("Log action with such Id was not found"); }  //////////////
+            //var logAction = _logActionRepository.FindBy(logData.ActionId);
+            //if (logAction.Value == null) { throw new NullReferenceException("Log action with such Id was not found"); }  //////////////
 
 
 
-            var newLog = new Log
-            {
-                ClientIp = loggingContext.ClientIp,
-                Date = loggingContext.RequestDate,
-                UserAgent = loggingContext.UserAgent,
-                UserName = loggingContext.UserName,
+            //var newLog = new Log
+            //{
+            //    ClientIp = loggingContext.ClientIp,
+            //    Date = loggingContext.RequestDate,
+            //    UserAgent = loggingContext.UserAgent,
+            //    UserName = loggingContext.UserName,
 
-                Action = logAction.Value,
-                LogActionResult = logData.LogActionResult,
-                Description = logData.Description,
-                EventId = logData.EventId,
-                Level = logData.Level,
-                Right = right
-            };
+            //    Action = logAction.Value,
+            //    LogActionResult = logData.LogActionResult,
+            //    Description = logData.Description,
+            //    EventId = logData.EventId,
+            //    Level = logData.Level,
+            //    Right = right
+            //};
 
-            //for login 
-            if (string.IsNullOrEmpty(newLog.UserName) && !string.IsNullOrEmpty(userName))
-                newLog.UserName = userName;
+            ////for login 
+            //if (string.IsNullOrEmpty(newLog.UserName) && !string.IsNullOrEmpty(userName))
+            //    newLog.UserName = userName;
 
-            _loggingRepository.Add(newLog);
-            return newLog.Id;
+            //_loggingRepository.Add(newLog);
+            //return newLog.Id;
+            return 0;
         }
 
         #endregion
