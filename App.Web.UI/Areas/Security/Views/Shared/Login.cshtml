@@ -53,7 +53,7 @@
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
-<body class="page-md login">
+<body class="page-md login" ng-app="AppSecurity" ng-controller="">
     <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
     <div class="menu-toggler sidebar-toggler">
     </div>
@@ -68,21 +68,29 @@
                 <p class="text-dmx text-uppercase">Description</p>
         </div>
         <!-- BEGIN LOGIN FORM -->
-        <div ng-bind-html="notification"></div>
-        <form ng-submit="login()">
+        @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+
+            <div class="form-group">
+                @Html.ValidationSummary()
+                <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+            </div>
             <div class="form-group">
                 <label class="input-label">İstifadəçi adı</label>
-                <input type="text" class="form-control" ng-model="data.UserName" />
+                @Html.TextBoxFor(u => u.Username, new { @class = "form-control" })
             </div>
             <div class="form-group">
                 <label class="input-label">Şifrə</label>
-                <input type="password" class="form-control" ng-model="data.Password" />
+                @Html.PasswordFor(p => p.Password, new { @class = "form-control" })
             </div>
             <div class="form-actions">
-                <input type="submit" value="Daxil ol" class="btn btn-success"/>
-                <loader ng-show="showLoading"></loader>
+                <button type="submit" value="1" class="btn btn-success">Daxil ol</button>
+                @*<label class="rememberme check">
+                    <input type="checkbox" name="remember" value="1" />Remember
+                </label>
+                <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>*@
             </div>
-        </form>
+        }
         <!-- END LOGIN FORM -->
     </div>
     <div class="copyright">
