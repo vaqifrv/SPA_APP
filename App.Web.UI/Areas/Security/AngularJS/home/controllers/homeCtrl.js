@@ -1,0 +1,3 @@
+﻿var homeCtrl = function($scope) {
+    
+}

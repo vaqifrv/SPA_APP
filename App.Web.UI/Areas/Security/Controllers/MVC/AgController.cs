@@ -2,7 +2,7 @@
 using System.Web;
 using System.Web.Mvc;
 
-namespace App.Web.UI.Areas.Security.Controllers
+namespace App.Web.UI.Areas.Security.Controllers.MVC
 {
     public class AgController : Controller
     {

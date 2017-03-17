@@ -184,7 +184,6 @@
   <ItemGroup>
     <Folder Include="AngularJS\app\home\services\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Security\AngularJS\login\controllers\" />
     <Folder Include="Areas\Security\Content\files\" />
     <Folder Include="Areas\Security\Content\images\persons\5e1656d8-846d-4072-88df-ab4ef5c410b7\" />
     <Folder Include="Areas\Security\Content\images\users\admin\" />
@@ -200,11 +199,12 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Areas\Security\Controllers\AgController.cs" />
+    <Compile Include="Areas\Security\Controllers\MVC\AgController.cs" />
     <Compile Include="Areas\Security\Controllers\API\RightController.cs" />
     <Compile Include="Areas\Security\Controllers\API\RoleController.cs" />
     <Compile Include="Areas\Security\Controllers\API\UserController.cs" />
-    <Compile Include="Areas\Security\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Security\Controllers\MVC\HomeController.cs" />
+    <Compile Include="Areas\Security\Controllers\MVC\LoginController.cs" />
     <Compile Include="Areas\Security\Models\AdminEditViewModel.cs" />
     <Compile Include="Areas\Security\Models\CheckedItem.cs" />
     <Compile Include="Areas\Security\Models\PagingInfo.cs" />
@@ -241,7 +241,19 @@
     <Content Include="AngularJS\app\test\controllers\testCtrl.js" />
     <Content Include="AngularJS\app\test\services\testService.js" />
     <Content Include="AngularJS\app\test\views\test.html" />
-    <Content Include="Areas\Security\AngularJS\login\views\login-view.html" />
+    <Content Include="Areas\Security\AngularJS\app.js" />
+    <Content Include="Areas\Security\AngularJS\common\directives\loader.js" />
+    <Content Include="Areas\Security\AngularJS\common\factory\notification.js" />
+    <Content Include="Areas\Security\AngularJS\config.js" />
+    <Content Include="Areas\Security\AngularJS\footer\directives\footer-dir.js" />
+    <Content Include="Areas\Security\AngularJS\footer\templates\footer-dir.html" />
+    <Content Include="Areas\Security\AngularJS\header\directives\header-dir.js" />
+    <Content Include="Areas\Security\AngularJS\header\templates\header-dir.html" />
+    <Content Include="Areas\Security\AngularJS\home\controllers\homeCtrl.js" />
+    <Content Include="Areas\Security\AngularJS\home\views\home.html" />
+    <Content Include="Areas\Security\AngularJS\left-sidebar\directives\left-sidebar-dir.js" />
+    <Content Include="Areas\Security\AngularJS\left-sidebar\templates\left-sidebar-dir.html" />
+    <Content Include="Areas\Security\AngularJS\mainCtrl.js" />
     <Content Include="Areas\Security\AngularJS\right\controllers\rightCreateCtrl.js" />
     <Content Include="Areas\Security\AngularJS\right\controllers\rightListCtrl.js" />
     <Content Include="Areas\Security\AngularJS\right\services\rightService.js" />
@@ -1168,6 +1180,7 @@
     <Content Include="Areas\Security\Content\instruction.pdf" />
     <Content Include="Areas\Security\Content\widgets.json" />
     <Content Include="Areas\Security\Content\widgets_default.json" />
+    <Content Include="Areas\Security\Views\Home\Index.cshtml" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-2.2.1.min.map" />
     <Content Include="Scripts\version.json" />

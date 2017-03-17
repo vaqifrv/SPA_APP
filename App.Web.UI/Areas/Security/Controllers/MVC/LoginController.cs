@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace App.Web.UI.Areas.Security.Controllers
+namespace App.Web.UI.Areas.Security.Controllers.MVC
 {
     public class LoginController : AgController
     {
@@ -118,16 +118,12 @@ namespace App.Web.UI.Areas.Security.Controllers
                 SsoService service = new SsoService();
                 returnUrl = service.PostLoginToSso(returnUrl, userName);
                 #endregion
-
-
-
                 return Redirect(returnUrl);
             }
             else
             {
                 ModelState.AddModelError("", "İstifadəçi adı və ya şifrəsi yanlışdır!");
                 ViewBag.returnUrl = returnUrl;
-
 
                 return View("Login");
             }

@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="utf-8" />
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>App Administrator</title>
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="/Areas/Security/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Areas/Security/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Areas/Security/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Areas/Security/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="/Areas/Security/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="/Areas/Security/assets/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="/Areas/Security/assets/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <link href="/Areas/Security/assets/layouts/layout4/css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Areas/Security/assets/layouts/layout4/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="/Areas/Security/assets/layouts/layout4/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Areas/Security/assets/global/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Areas/Security/assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Areas/Security/assets/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="/Areas/Security/assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Areas/Security/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/Areas/Security/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
+    <link href="/Areas/Security/assets/pages/css/profile-2.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Areas/Security/assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/magnific-popup.css" rel="stylesheet" />
+    <link href="~/Content/loader.css" rel="stylesheet" />
+    <link href="/Areas/Security/assets/textAngular/dist/textAngular.css" rel="stylesheet" />
+    <link href="/Areas/Security/assets/textAngular/dist/style.css" rel="stylesheet" />
+    <link href="/Content/ag-custom.css" rel="stylesheet" />
+    <!-- END THEME LAYOUT STYLES -->
+    <link rel="shortcut icon" href="/Content/favicon.ico" />
+</head>
+<body id="mainBody" class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo page-md" ng-app="AppSecurity" ng-cloak>
+
+    <!-- BEGIN HEADER -->
+    <header-dir></header-dir>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"> </div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <div class="page-sidebar navbar-collapse collapse">
+                <left-sidebar-dir></left-sidebar-dir>
+                <!-- END SIDEBAR MENU -->
+            </div>
+            <!-- END SIDEBAR -->
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <div class="page-content" ng-controller="MainCtrl">
+                <div ng-view></div>
+            </div>
+            <!-- END CONTENT BODY -->
+        </div>
+        <!-- END CONTENT -->
+        <!-- BEGIN QUICK SIDEBAR -->
+        <a href="javascript:;" class="page-quick-sidebar-toggler">
+            <i class="icon-login"></i>
+        </a>
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    <footer-dir></footer-dir>
+    <!-- END FOOTER -->
+    <!-- BEGIN CORE PLUGINS -->
+    <script src="/Areas/Security/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    @*<script src="/Scripts/Libraries/jquery.signalR-2.2.1.min.js"></script>*@
+    @*<script src="/signalr/hubs"></script>*@
+    <script src="/Areas/Security/assets/global/plugins/jquery.pulsate.min.js" type="text/javascript"></script>
+    <script src="/Areas/Security/assets/global/plugins/jquery-bootpag/jquery.bootpag.min.js" type="text/javascript"></script>
+    <script src="/Scripts/Libraries/jquery.magnific-popup.js"></script>
+
+    <script src="/Areas/Security/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/Areas/Security/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+    <script src="/Areas/Security/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+    <script src="/Areas/Security/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="/Areas/Security/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="/Areas/Security/assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+    <script src="/Areas/Security/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="/Areas/Security/assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="/Areas/Security/assets/global/scripts/app.min.js" type="text/javascript"></script>
+    <script src="/Areas/Security/assets/pages/scripts/components-select2.min.js" type="text/javascript"></script>
+    <!-- END THEME GLOBAL SCRIPTS -->
+    <!-- BEGIN THEME LAYOUT SCRIPTS -->
+    <script src="/Areas/Security/assets/layouts/layout4/scripts/layout.min.js" type="text/javascript"></script>
+    <script src="/Areas/Security/assets/layouts/layout4/scripts/demo.min.js" type="text/javascript"></script>
+    <script src="/Areas/Security/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+    <!-- END THEME LAYOUT SCRIPTS -->
+    <!-- BEGIN CORE ANGULAR PLUGINS -->
+    <script src="~/Scripts/Libraries/angular.min.js"></script>
+    <script src="/Scripts/Libraries/angular-route.min.js"></script>
+    <script src="/Scripts/Libraries/i18n/angular-locale_az-latn-az.js"></script>
+    <script src="/Scripts/Libraries/angular-sanitize.min.js"></script>
+    <!-- END CORE ANGULAR PLUGINS -->
+    <!-- BEGIN THEME LAYOUT ANGULAR MODULE SCRIPTS -->
+
+    <script src="/Areas/Security/assets/textAngular/dist/textAngular-rangy.min.js"></script>
+    <script src="/Areas/Security/assets/textAngular/dist/textAngular-sanitize.min.js"></script>
+    <script src="/Areas/Security/assets/textAngular/dist/textAngular.min.js"></script>
+
+    <!-- ANGULARJS DIRECTIVES -->
+    <script src="/Areas/Security/AngularJS/footer/directives/footer-dir.js"></script>
+    <script src="/Areas/Security/AngularJS/header/directives/header-dir.js"></script>
+    <script src="/Areas/Security/AngularJS/left-sidebar/directives/left-sidebar-dir.js"></script>
+    <script src="/Areas/Security/AngularJS/common/directives/loader.js"></script>
+    <!-- END ANGULARJS DIRECTIVES -->
+    <!-- ANGULARJS SERVICES -->
+    <script src="/Areas/Security/AngularJS/common/factory/notification.js"></script>
+    <script src="/Areas/Security/AngularJS/right/services/rightService.js"></script>
+    <script src="/Areas/Security/AngularJS/role/services/roleService.js"></script>
+    <script src="/Areas/Security/AngularJS/user/services/userService.js"></script>
+    <!-- END ANGULARJS SERVICES -->
+    <!-- ANGULARJS CONTROLLERS -->
+    <script src="/Areas/Security/AngularJS/mainCtrl.js"></script>
+    <script src="/Areas/Security/AngularJS/home/controllers/homeCtrl.js"></script>
+    <script src="/Areas/Security/AngularJS/right/controllers/rightListCtrl.js"></script>
+    <script src="/Areas/Security/AngularJS/right/controllers/rightCreateCtrl.js"></script>
+    <script src="/Areas/Security/AngularJS/role/controllers/roleListCtrl.js"></script>
+    <script src="/Areas/Security/AngularJS/role/controllers/roleCreateCtrl.js"></script>
+    <script src="/Areas/Security/AngularJS/user/controllers/userCreateCtrl.js"></script>
+    <script src="/Areas/Security/AngularJS/user/controllers/userListCtrl.js"></script>
+    <script src="/Areas/Security/AngularJS/user/controllers/userEditCtrl.js"></script>
+    <script src="/Areas/Security/AngularJS/user/controllers/userDetailsCtrl.js"></script>
+    <!-- END ANGULARJS CONTROLLERS -->
+    <!-- END THEME LAYOUT ANGULAR MODULE SCRIPTS -->
+    <!-- ANGULARJS APP -->
+    <script src="/Areas/Security/AngularJS/config.js"></script>
+    <script src="/Areas/Security/AngularJS/app.js"></script>
+    <!-- END ANGULARJS APP -->
+
+    <script src="/Scripts/Libraries/ag-custom.js"></script>
+</body>
+</html>
