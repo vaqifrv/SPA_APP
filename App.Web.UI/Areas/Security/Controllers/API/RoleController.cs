@@ -90,7 +90,7 @@ namespace App.Web.UI.Areas.Security.Controllers.API
         }
 
         [HttpGet, Route("GetDataForCreateOrEdit/{id?}")]
-        public ObjectWrapperWithNameOfSet GetDataForCreateOrEdit(int? id = null)
+        public ValueResponse<RolesDictionaryEditViewModel> GetDataForCreateOrEdit(int? id = null)
         {
             try
             {
@@ -105,19 +105,21 @@ namespace App.Web.UI.Areas.Security.Controllers.API
                 model.CheckedRights.ForEach(x => x.Item.Roles = null);
                 model.Role.Rights = null;
                 model.Role.Users = null;
-                
-                return new ObjectWrapperWithNameOfSet("", new ValueResponse<RolesDictionaryEditViewModel>
+
+                return new ValueResponse<RolesDictionaryEditViewModel>
                 {
-                    Value = model
-                });
+                    Value = model,
+                    Success = true
+                };
 
             }
             catch (Exception e)
             {
-                return new ObjectWrapperWithNameOfSet("", new ValueResponse<string>
+                return new ValueResponse<RolesDictionaryEditViewModel>
                 {
-                    Errors = new List<BrokenRule> { new BrokenRule(e.Message) }
-                });
+                    Errors = new List<BrokenRule> { new BrokenRule(e.Message) },
+                    Success = false
+                };
             }
         }
 
@@ -169,7 +171,8 @@ namespace App.Web.UI.Areas.Security.Controllers.API
 
                 return new ObjectWrapperWithNameOfSet("", new ValueResponse<Role>
                 {
-                    Value = role
+                    Value = role,
+                    Success = true
                 });
             }
             catch (Exception e)

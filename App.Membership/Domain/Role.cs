@@ -34,9 +34,6 @@ namespace App.Membership.Domain
             //List<ValidationResult> errors=new List<ValidationResult>();
             if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Name.Trim()))
                 yield return new ValidationResult("Rolun adı boş ola bilmez", new string[] { "Name" });
-
-
-
         }
     }
 }
